@@ -14,6 +14,10 @@
         <div class="row">
             <div class="col-md-12">
                 <h1> Add New ToDo</h1>
+                @if(Session::has('success'))
+              <div class="alert alert-success" role="alert">{{Session::get('success')}}</div>
+
+                @endif
                  <form  method="post" action="{{url('save-todo')}}">
                   @csrf
                   <div class="md-3">

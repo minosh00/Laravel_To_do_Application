@@ -14,7 +14,7 @@
             <div class="col-md-12">
                 <h1>My To Do List </h1>
          <div style="margin-right:10px">
-            <a href="{{url('add-todo')}}" > Add new todo  </a>
+            <a href="{{url('add-todo')}}"  class="btn btn-primary"  > Add new todo  </a>
          </div>
                 <table class="table" >
                     <thead><tr>

@@ -20,5 +20,15 @@ class crudController extends Controller
     }
     public function saveTodo(Request $request){
 
+       // dd($request->all());
+        $name =  $request->name;
+        $todo =  $request->todo;
+
+       $todos = new  crudmodel();
+       $todos ->name= $name;
+       $todos ->todo= $todo;
+       $todos->save();
+
+       return  redirect()-> back()->with('success', 'todo added successfully');
     }
 }
