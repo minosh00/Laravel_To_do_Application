@@ -23,6 +23,9 @@
                   <div class="md-3">
                     <label class="form-label">Name </label>
                     <input type="text" class="form-control" name="name" placeholder="enter your name " />
+                    @error('name')
+                    <div class="alert alert-danger" role="alert">{{$message}}</div>
+                    @enderror
                   </div>
                   <div class="md-3">
                     <label class="form-label">Todo Item  </label>

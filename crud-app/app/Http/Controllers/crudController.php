@@ -19,6 +19,10 @@ class crudController extends Controller
 
     }
     public function saveTodo(Request $request){
+        $request-> validate([
+            'name' => 'required',
+            'todo' => 'required'
+        ]);
 
        // dd($request->all());
         $name =  $request->name;
