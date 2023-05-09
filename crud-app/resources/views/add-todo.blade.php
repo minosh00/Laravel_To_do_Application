@@ -14,7 +14,21 @@
         <div class="row">
             <div class="col-md-12">
                 <h1> Add New ToDo</h1>
-                 <form  method="post" action="">
+                 <form  method="post" action="{{url('save-todo')}}">
+                  @csrf
+                  <div class="md-3">
+                    <label class="form-label">Name </label>
+                    <input type="text" class="form-control" name="name" placeholder="enter your name " />
+                  </div>
+                  <div class="md-3">
+                    <label class="form-label">Todo Item  </label>
+                    <textarea type="textarea" class="form-control" name="todo" placeholder="enter your todo Item " ></textarea>
+                  </div>
+                  <br></br>
+                  <button type="submit" class="btn btn-primary">submit</button>
+                  <a href="{{url('todo-list')}}"  class="btn btn-danger"> back to home</a>
+
+
                  </form>
 
 

@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 Route::get('todo-list', [crudController::class, 'index']);
 Route::get('add-todo', [crudController::class, 'addTodo']);
-
+Route::post('save-todo', [crudController::class, 'saveTodo']);
 

@@ -18,4 +18,7 @@ class crudController extends Controller
         return   view('add-todo');
 
     }
+    public function saveTodo(Request $request){
+
+    }
 }
