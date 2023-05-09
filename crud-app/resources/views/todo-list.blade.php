@@ -33,7 +33,8 @@
                             <td>{{$i++}}</td>
                             <td>{{$todo->name}}</td>
                             <td>{{$todo->todo}}</td>
-                            <td>Edit  |  Delete </td>
+                            <td> <a href="{{url('edit-todo/'.$todo->id)}}"  class="btn btn-primary"  > Edit </a>
+                                |  Delete </td>
 
                          </tr>
                         @endforeach

@@ -35,4 +35,13 @@ class crudController extends Controller
 
        return  redirect()-> back()->with('success', 'todo added successfully');
     }
+
+
+    public function editTodo($id){
+
+        $data =  crudmodel::where('id' , '=', $id)->first();
+        return  view("edit-todo", compact('data') );
+
+    }
+
 }
