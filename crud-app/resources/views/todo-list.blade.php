@@ -16,6 +16,11 @@
          <div style="margin-right:10px">
             <a href="{{url('add-todo')}}"  class="btn btn-primary"  > Add new todo  </a>
          </div>
+         @if(Session::has('success'))
+         <div class="alert alert-success" role="alert">{{Session::get('success')}}</div>
+
+           @endif
+
                 <table class="table" >
                     <thead><tr>
                         <th>#</th>
@@ -34,7 +39,7 @@
                             <td>{{$todo->name}}</td>
                             <td>{{$todo->todo}}</td>
                             <td> <a href="{{url('edit-todo/'.$todo->id)}}"  class="btn btn-primary"  > Edit </a>
-                                |  Delete </td>
+                                |  <a href="{{url('delete-todo/'.$todo->id)}}"  class="btn btn-danger"  > Delete </a> </td>
 
                          </tr>
                         @endforeach

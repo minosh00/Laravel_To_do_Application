@@ -44,4 +44,33 @@ class crudController extends Controller
 
     }
 
+    public function updateTodo(Request $request){
+        $request-> validate([
+            'name' => 'required',
+            'todo' => 'required'
+        ]);
+
+          // dd($request->all());
+          $id =  $request->id;
+          $name =  $request->name;
+          $todo =  $request->todo;
+
+          crudmodel::where('id', '=', $id)->update([
+            'name' => $name,
+            'todo' => $todo
+
+          ]);
+          return  redirect()-> back()->with('success', 'todo updated successfully');
+
+    }
+
+    public function deleteTodo($id){
+
+        crudmodel::where('id', '=', $id)->delete();
+
+        return  redirect()-> back()->with('success', 'todo delete successfully');
+
+
+    }
+
 }

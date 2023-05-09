@@ -20,6 +20,7 @@
                 @endif
                  <form  method="post" action="{{url('update-todo')}}">
                   @csrf
+                  <input  type="hidden" name="id" value="{{$data->id}}"
                   <div class="md-3">
                     <label class="form-label">Name </label>
                     <input type="text" class="form-control" name="name" placeholder="enter your name " value="{{$data->name}}"  />
